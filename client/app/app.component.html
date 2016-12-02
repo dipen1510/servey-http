@@ -1,0 +1,51 @@
+<div class="container">
+    
+            <div class="page-header">
+            <h1>
+                <span>SURVEY SCHEDULER LIST</span><br/>
+                
+            </h1>
+            </div>
+        
+          <div class="panel panel-default">
+            <div class="panel-heading">User information</div>
+
+             
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th style="width: 10%">
+                        <button class="btn btn-info" title="list">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                      </button>
+                    </th>
+                    <th style="width: 20%"> Survey Name  </th>
+                    <th style="width: 30%"> Description  </th>
+                    <th style="width: 10%"> Survey Type  </th>
+                    <th style="width: 10%"> Scheduled Time(Months)  </th>
+                    <th style="width: 10%"> Executed Date  </th>
+                    <th style="width: 10%"> NeighbourHood  </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let sur of surveys">
+                    <td>
+                      <button class="btn btn-info" title="edit" >
+                        <span class="glyphicon glyphicon-pencil"></span>
+                      </button>
+                    </td>
+                    <td>{{sur.survey_name}}</td>
+                    <td>{{sur.description}}</td>
+                    <td>{{sur.survey_type}}</td>
+                    <td class="text-center">{{sur.scheduled_time}}</td>
+                    <td>{{sur.executed_date}}</td>
+                    <td>{{sur.neighbourhood}}</td>
+                </tr>
+                </tbody>
+                
+            </table>
+            </div> 
+        
+          
+      
+</div>
